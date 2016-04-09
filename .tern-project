@@ -5,7 +5,8 @@
     "expand-tilde",
     "pretty-data",
     "shelljs",
-    "lwip"
+    "lwip",
+    "readline-sync"
   ],
   "plugins": {
     "node": {}
