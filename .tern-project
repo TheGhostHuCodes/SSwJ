@@ -3,7 +3,8 @@
     "fs",
     "path",
     "expand-tilde",
-    "pretty-data"
+    "pretty-data",
+    "shelljs"
   ],
   "plugins": {
     "node": {}
