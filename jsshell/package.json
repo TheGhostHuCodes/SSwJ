@@ -1,0 +1,20 @@
+{
+  "name": "jsshell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generateblogpost.js",
+  "dependencies": {
+    "moment": "^2.12.0",
+    "expand-tilde": "^1.2.1",
+    "lwip": "^0.0.8",
+    "pretty-data": "^0.40.0",
+    "readline-sync": "^1.4.1",
+    "shelljs": "^0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
