@@ -1,0 +1,10 @@
+{
+  "libs": [
+    "fs",
+    "path",
+    "expand-tilde"
+  ],
+  "plugins": {
+    "node": {}
+  }
+}
