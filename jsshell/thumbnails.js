@@ -1,7 +1,8 @@
 require("shelljs/global");
 
-var images = ls("images/*.jpg"); // fs.readdirSync
-echo(images);                    // console.log
+var images = ls("../images/*.jpg"); // fs.readdirSync
+echo(images);                       // console.log
 
-rm("-rf", "images/thumbs"); // fs.rmdirSync
-mkdir("images/thumbs");     // fs.mkdirSync
+var thumbsDirectory = "../images/thumbs";
+rm("-rf", thumbsDirectory); // fs.rmdirSync
+mkdir(thumbsDirectory);     // fs.mkdirSync
