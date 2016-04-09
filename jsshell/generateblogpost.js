@@ -13,7 +13,8 @@ var header = `
 var fileName = `${ date }.md`;
 
 if (fs.existsSync(fileName)) {
-    console.log(`ERROR file exists : ${fileName}`);
+    console.warn(`ERROR file exists : ${fileName}`);
 } else {
     fs.writeFileSync(fileName, header);
+    console.log(`CREATING: ${fileName}`);
 }
