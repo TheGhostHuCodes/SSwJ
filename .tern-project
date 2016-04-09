@@ -4,7 +4,8 @@
     "path",
     "expand-tilde",
     "pretty-data",
-    "shelljs"
+    "shelljs",
+    "lwip"
   ],
   "plugins": {
     "node": {}
