@@ -1,6 +1,7 @@
 var fs = require("fs");
 var path = require("path");
 var expandTilde = require("expand-tilde");
+var prettyData = require("pretty-data").pd;
 
 var xmlFile =
   expandTilde("~/Repos/SSwJ/MyFoodapediaData/Food_Display_Table.xml");
@@ -14,3 +15,6 @@ if (!fs.existsSync(xmlFile)) {
 
 var xml = fs.readFileSync(xmlFile, 'utf8');
 console.log(xml);
+
+var prettyXml = prettyData.xml(xml);
+console.log(prettyXml);
