@@ -1,8 +1,10 @@
 var fs = require("fs");
 var path = require("path");
+var expandTilde = require("expand-tilde");
 
-var xmlFile = path.join(process.env.HOME,
-                        "Repos/SSwJ/MyFoodapediaData/Food_Display_Table.xml");
+var xmlFile =
+  expandTilde("~/Repos/SSwJ/MyFoodapediaData/Food_Display_Table.xml");
+
 console.log(xmlFile);
 
 if (!fs.existsSync(xmlFile)) {
