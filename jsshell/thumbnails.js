@@ -1,13 +1,24 @@
 require("shelljs/global");
 var lwip = require("lwip");
 var path = require("path");
+var fs = require("fs");
+var readlineSync = require('readline-sync');
 
 var images = find("../images/").filter(file => file.match(/\.jpg$/i));
-echo(images);                       // console.log
+echo(images); // console.log
 
 var thumbsDirectory = "../thumbs";
-rm("-rf", thumbsDirectory); // fs.rmdirSync
-mkdir(thumbsDirectory);     // fs.mkdirSync
+if (fs.existsSync(thumbsDirectory)) {
+    // prompt.
+    var response = readlineSync.keyInYN(
+      `The ${thumbsDirectory} exists, would you like to wipe it out and continue?`);
+    if (!response) {
+        echo("Aborting termination of thumbnails");
+        exit();
+    }
+    rm("-rf", thumbsDirectory); // fs.rmdirSync
+}
+mkdir(thumbsDirectory); // fs.mkdirSync
 
 images.forEach(imageFile => {
     lwip.open(imageFile, (error, image) => {
