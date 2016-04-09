@@ -5,7 +5,7 @@ var path = require("path");
 var images = ls("../images/*.jpg"); // fs.readdirSync
 echo(images);                       // console.log
 
-var thumbsDirectory = "../images/thumbs";
+var thumbsDirectory = "../thumbs";
 rm("-rf", thumbsDirectory); // fs.rmdirSync
 mkdir(thumbsDirectory);     // fs.mkdirSync
 
