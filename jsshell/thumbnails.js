@@ -4,10 +4,12 @@ var path = require("path");
 var fs = require("fs");
 var readlineSync = require('readline-sync');
 
-var images = find("../images/").filter(file => file.match(/\.jpg$/i));
+var imagesDirectory = "../images";
+
+var images = ls(`${imagesDirectory}/*.jpg`);
 echo(images); // console.log
 
-var thumbsDirectory = "../thumbs";
+var thumbsDirectory = path.join(imagesDirectory, "thumbs");
 if (fs.existsSync(thumbsDirectory)) {
     // prompt.
     var response = readlineSync.keyInYN(
