@@ -11,3 +11,6 @@ if (!fs.existsSync(xmlFile)) {
     console.warn(`ERROR file doesn't exist: ${xmlFile}`);
     process.exit(1);
 }
+
+var xml = fs.readFileSync(xmlFile, 'utf8');
+console.log(xml);
