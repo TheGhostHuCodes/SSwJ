@@ -4,6 +4,7 @@ var path = require("path");
 var fs = require("fs");
 var readlineSync = require('readline-sync');
 
+var size = 42;
 var imagesDirectory = "../images";
 
 var images = ls(`${imagesDirectory}/*.jpg`);
@@ -28,7 +29,7 @@ images.forEach(imageFile => {
         var thumbFile = path.join(thumbsDirectory, fileName);
 
         image.batch()
-          .contain(42, 42, "black")
+          .contain(size, size, "black")
           .writeFile(thumbFile, err => {
               if (err) {
                   console.error(err);
