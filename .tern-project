@@ -2,7 +2,8 @@
   "libs": [
     "fs",
     "path",
-    "expand-tilde"
+    "expand-tilde",
+    "pretty-data"
   ],
   "plugins": {
     "node": {}
