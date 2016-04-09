@@ -2,7 +2,7 @@ require("shelljs/global");
 var lwip = require("lwip");
 var path = require("path");
 
-var images = ls("../images/*.jpg"); // fs.readdirSync
+var images = find("../images/").filter(file => file.match(/\.jpg$/i));
 echo(images);                       // console.log
 
 var thumbsDirectory = "../thumbs";
