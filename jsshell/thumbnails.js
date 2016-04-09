@@ -22,6 +22,7 @@ images.forEach(imageFile => {
                   return;
               }
               echo(`${thumbFile} done`);
+              exec(`eog ${thumbFile}`);
           });
     });
 });
