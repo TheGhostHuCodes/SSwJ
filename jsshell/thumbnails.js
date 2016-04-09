@@ -11,12 +11,17 @@ mkdir(thumbsDirectory);     // fs.mkdirSync
 
 images.forEach(imageFile => {
     lwip.open(imageFile, (error, image) => {
-        echo(imageFile);
-        echo(`Width: ${image.width()}, Height: ${image.height()}`);
-
         var fileName = path.basename(imageFile);
-        echo(`basename: ${fileName}`);
         var thumbFile = path.join(thumbsDirectory, fileName);
-        echo(`thumbFile: ${thumbFile}`);
+
+        image.batch()
+          .contain(42, 42, "black")
+          .writeFile(thumbFile, err => {
+              if (err) {
+                  console.error(err);
+                  return;
+              }
+              echo(`${thumbFile} done`);
+          });
     });
 });
