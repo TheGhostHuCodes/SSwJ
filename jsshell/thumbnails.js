@@ -14,6 +14,10 @@ program.version('1.0')
 
 var imagesDirectory = program.directory;
 var size = parseInt(program.size);
+if (!imagesDirectory) {
+    echo("Images directory expected");
+    program.help()
+}
 
 var images = ls(`${imagesDirectory}/*.jpg`);
 echo(images); // console.log
