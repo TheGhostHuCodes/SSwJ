@@ -6,7 +6,8 @@
     "pretty-data",
     "shelljs",
     "lwip",
-    "readline-sync"
+    "readline-sync",
+    "commander"
   ],
   "plugins": {
     "node": {}
