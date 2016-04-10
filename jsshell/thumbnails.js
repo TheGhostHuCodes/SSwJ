@@ -3,9 +3,17 @@ var lwip = require("lwip");
 var path = require("path");
 var fs = require("fs");
 var readlineSync = require('readline-sync');
+var program = require('commander');
 
-var size = 42;
-var imagesDirectory = "../images";
+program.version('1.0')
+  .option('-s, --size <integer>',
+          'The image size to shrink to, both height and width.')
+  .option('-d, --directory <path>',
+          'The directory of images to create thumbnails for.')
+  .parse(process.argv);
+
+var imagesDirectory = program.directory;
+var size = parseInt(program.size);
 
 var images = ls(`${imagesDirectory}/*.jpg`);
 echo(images); // console.log
