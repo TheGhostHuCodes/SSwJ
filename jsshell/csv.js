@@ -10,6 +10,8 @@ function average(values) {
 }
 
 csv.parse(csvData, (error, rows) => {
-    closingPrices = rows.slice(1).map(row => row[4]).map(parseFloat);
-    echo(`Average: ${average(closingPrices)}`)
+    var dataRows = rows.slice(1);
+    var sortedByClosingPrice =
+        _(dataRows).sortBy(r => parseFloat(r[4])).value();
+    echo(sortedByClosingPrice)
 });
