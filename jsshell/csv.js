@@ -4,8 +4,12 @@ var _ = require("lodash");
 
 var csvData = cat("../stocks.csv");
 
+function average(values) {
+    var sum = _.sum(values);
+    return sum / values.length;
+}
+
 csv.parse(csvData, (error, rows) => {
     closingPrices = rows.slice(1).map(row => row[4]).map(parseFloat);
-    var sum = _.sum(closingPrices);
-    echo(`Average: ${sum/closingPrices.length}`)
+    echo(`Average: ${average(closingPrices)}`)
 });
