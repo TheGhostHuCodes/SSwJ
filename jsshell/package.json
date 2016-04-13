@@ -5,6 +5,7 @@
   "main": "generateblogpost.js",
   "dependencies": {
     "commander": "^2.9.0",
+    "csv": "^0.4.6",
     "expand-tilde": "^1.2.1",
     "lwip": "^0.0.8",
     "moment": "^2.12.0",
