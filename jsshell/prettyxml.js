@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require("fs");
 require("shelljs/global");
 var prettyData = require("pretty-data").pd;

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 require("shelljs/global");
 var lwip = require("lwip");
 var path = require("path");

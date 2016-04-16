@@ -14,6 +14,10 @@
     "readline-sync": "^1.4.1",
     "shelljs": "^0.6.0"
   },
+  "bin": {
+    "prettyxml": "./prettyxml.js",
+    "thumbs": "./thumbnails.js"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
