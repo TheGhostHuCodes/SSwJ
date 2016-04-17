@@ -5,9 +5,10 @@ var lwip = require("lwip");
 var path = require("path");
 var fs = require("fs");
 var readlineSync = require('readline-sync');
-var options = require("./options.js")
+var options = require("./options.js");
 
-  var size = options.size;
+/*global ls echo exit rm mkdir exec*/
+var size = options.size;
 var imagesDirectory = options.imagesDirectory;
 
 var images = ls(`${imagesDirectory}/*.jpg`);
@@ -31,15 +32,13 @@ images.forEach(imageFile => {
         var fileName = path.basename(imageFile);
         var thumbFile = path.join(thumbsDirectory, fileName);
 
-        image.batch()
-          .contain(size, size, "black")
-          .writeFile(thumbFile, err => {
-              if (err) {
-                  console.error(err);
-                  return;
-              }
-              echo(`${thumbFile} done`);
-              exec(`eog ${thumbFile}`);
-          });
+        image.batch().contain(size, size, "black").writeFile(thumbFile, err => {
+            if (err) {
+                console.error(err);
+                return;
+            }
+            echo(`${thumbFile} done`);
+            exec(`eog ${thumbFile}`);
+        });
     });
 });

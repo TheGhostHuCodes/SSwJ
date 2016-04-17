@@ -1,5 +1,6 @@
 var program = require("commander");
 
+/*global echo*/
 program.version("1.0")
   .option("-s, --size <integer>",
           "The image size to shrink to, both height and width.", 200)
@@ -9,7 +10,7 @@ program.version("1.0")
 
 if (!program.directory) {
     echo("Images directory expected");
-    program.help()
+    program.help();
 }
 
 module.exports.imagesDirectory = program.directory;

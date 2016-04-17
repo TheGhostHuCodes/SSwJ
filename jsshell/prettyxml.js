@@ -4,6 +4,7 @@ var fs = require("fs");
 require("shelljs/global");
 var prettyData = require("pretty-data").pd;
 
+/*global exit cat*/
 var xmlFile = process.argv[2];
 if (!fs.existsSync(xmlFile)) {
     console.warn(`ERROR file doesn't exist: ${xmlFile}`);

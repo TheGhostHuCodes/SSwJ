@@ -2,6 +2,7 @@ var moment = require("moment");
 require("shelljs/global");
 var fs = require("fs");
 
+/*global env exit*/
 var date = moment().format("YYYY-MM-DD-HH-mm");
 var userName = env.USER;
 
