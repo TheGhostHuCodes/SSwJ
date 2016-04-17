@@ -24,6 +24,8 @@
     "thumbs": "./thumbnails.js"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
     "mocha": "^2.4.5"
   },
   "scripts": {
