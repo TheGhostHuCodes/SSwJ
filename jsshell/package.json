@@ -1,8 +1,13 @@
 {
   "name": "jsshell",
   "version": "1.0.0",
-  "description": "",
+  "description": "Shell Scripting with JavaScript",
   "main": "generateblogpost.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheGhostHuCodes/SSwJ.git"
+  },
+  "author": "Yung-Jin (Joey) Hu",
   "dependencies": {
     "commander": "^2.9.0",
     "csv": "^0.4.6",
@@ -24,6 +29,5 @@
   "scripts": {
     "test": "mocha tests"
   },
-  "author": "",
   "license": "ISC"
 }
